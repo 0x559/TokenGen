@@ -1,15 +1,6 @@
 import os, subprocess, ctypes, sys, getpass
 import subprocess
 import sys
-import os
-import random
-import string
-import threading
-import requests
-import subprocess
-from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QVBoxLayout, QHBoxLayout, QRadioButton
-from PyQt5.QtGui import QPixmap, QColor
 
 if ctypes.windll.shell32.IsUserAnAdmin() != 1:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
@@ -27,6 +18,16 @@ for module in modules:
         subprocess.check_call([sys.executable, "-m", "pip", "install", module])
 
 # Now import everything after ensuring modules are installed
+
+import os
+import random
+import string
+import threading
+import requests
+import subprocess
+from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QVBoxLayout, QHBoxLayout, QRadioButton
+from PyQt5.QtGui import QPixmap, QColor
 
 
 import tkinter as tk
